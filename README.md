@@ -1,8 +1,6 @@
 # legendsNeverDie
 because we lost too many in 2016
 
-
-<<<<<<< HEAD
 Action Items:
 1) move #id with keys along page 
 - set start
@@ -32,7 +30,7 @@ Action Items:
 	-- play a sound snippet
 	-- lighting bolt 
 - gates open when get close enough
-=======
+
 
 Gitflow:
 
@@ -41,6 +39,3 @@ branch structure:
 ** feature/____ feature being worked on 
 ** merge into master when feature is done 
 ** build##  deployment branch
-
-
->>>>>>> assets/images
