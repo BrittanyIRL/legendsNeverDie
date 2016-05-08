@@ -1,40 +1,59 @@
+    /// store key codes and currently pressed ones
+    var keys = {};
+        keys.UP = 38;
+        keys.LEFT = 37;
+        keys.RIGHT = 39;
+        keys.DOWN = 40;
 
-$(document).ready(function(){
-	console.log('ready');
+    /// store reference to character's position and element
+    var character = {
+      x: 100,
+      y: 100,
+      speedMultiplier: 2,
+      element: document.getElementById("legend")
+    };
 
+    /// key detection (better to use addEventListener, but this will do)
+    document.body.onkeyup = 
+    document.body.onkeydown = function(e){
+      if (e.preventDefault) { 
+        e.preventDefault();
+      }
+      else {
+        e.returnValue = false; 
+      }
+      var kc = e.keyCode || e.which;
+      keys[kc] = e.type == 'keydown';
+    };
 
-	setInterval(movelegend, 20);
-	var keys = {}
+    /// character movement update
+    var moveCharacter = function(dx, dy){
+      character.x += (dx||0) * character.speedMultiplier;
+      character.y += (dy||0) * character.speedMultiplier;
+      character.element.style.left = character.x + 'px';
+      character.element.style.top = character.y + 'px';
+    };
 
-	$(body).keydown(function(e) {
-	    keys[e.keyCode] = true;
-	});
+    /// character control
+    var detectCharacterMovement = function(){
+      if ( keys[keys.LEFT] ) {
+        moveCharacter(-1, 0);
+      }
+      if ( keys[keys.RIGHT] ) {
+        moveCharacter(1, 0);
+      }
+      if ( keys[keys.UP] ) {
+        moveCharacter(0, -1);
+      }
+      if ( keys[keys.DOWN] ) {
+        moveCharacter(0, 1);
+      }
+    };
 
-	$(body).keyup(function(e) {
-	    delete keys[e.keyCode];
-	});
+    /// update current position on screen
+    moveCharacter();
 
-//http://jsfiddle.net/fbFuW/220/
-function movelegend() {
-  for (var direction in keys) {
-    if (!keys.hasOwnProperty(direction)) continue;
-    if (direction == 37) {
-        $("#legend").animate({left: "-=5"}, 0);                
-    }
-    if (direction == 38) {
-        $("#legend").animate({top: "-=5"}, 0);  
-    }
-    if (direction == 39) {
-        $("#legend").animate({left: "+=5"}, 0);  
-    }
-    if (direction == 40) {
-        $("#legend").animate({top: "+=5"}, 0);  
-    }
-  }
-}
-
-
-
-
-
-});
+    /// game loop
+    setInterval(function(){
+      detectCharacterMovement();
+    }, 1000/24);

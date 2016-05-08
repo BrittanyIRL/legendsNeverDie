@@ -6,8 +6,9 @@ height: 100%;
 }
 
 #legend {
+	position: absolute;
 	height: 30px;
-    position:absolute;
+	width: 30px;
     top:40%;
     left:40%;
     background-color: blue;
