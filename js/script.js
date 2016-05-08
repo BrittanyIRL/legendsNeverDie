@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	console.log('hey world');
+	console.log("let's dance");
     /// store key codes and currently pressed ones
     var keys = {};
         keys.UP = 38;
@@ -9,9 +9,9 @@ $(document).ready(function(){
 
     /// store reference to character's position and element
     var character = {
-      x: 100,
+      x: 300,
       y: 100,
-      speedMultiplier: 2,
+      speedMultiplier: 8,
       element: document.getElementById("legend")
     };
 
@@ -36,6 +36,7 @@ $(document).ready(function(){
       character.element.style.top = character.y + 'px';
     };
 
+
     /// character control
     var detectCharacterMovement = function(){
       if ( keys[keys.LEFT] ) {
@@ -50,11 +51,16 @@ $(document).ready(function(){
       if ( keys[keys.DOWN] ) {
         moveCharacter(0, 1);
       }
+
     };
 
     /// update current position on screen
     moveCharacter();
 
+
+
+
+		
     /// game loop
     setInterval(function(){
       detectCharacterMovement();
