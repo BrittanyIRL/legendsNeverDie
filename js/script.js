@@ -52,6 +52,7 @@ $(document).ready(function(){
         console.log("you can't go back");
       }
       if ( keys[keys.RIGHT] ) {
+      	$('#legend').addClass('tiltRight');
         moveCharacter(1, 0);
         moveWindow();
         detectGate();
@@ -65,17 +66,22 @@ $(document).ready(function(){
         moveCharacter(0, 1);
         moveWindow();
       }
+      else {
+      	$('#legend').addClass('hovering');
+      }
 
     };
 
     var detectGate = function(){
     	if (character.x > 1400){
     		console.log('reached');
+
     		}
     	if (character.x > 1500){
     		document.body.onkeydown = function(e){   
 				  e.preventDefault();
 				}
+				$('#legend').removeClass('tiltRight').addClass('hovering');
     	}
     };
 
@@ -92,12 +98,7 @@ $(document).ready(function(){
     setInterval(function(){
       detectCharacterMovement();
     }, 1000/24);
-    //moveWindow();
-    
-    /// game loop
-    setInterval(function(){
-      detectCharacterMovement();
-    }, 1000/24);
+
 
 
 });

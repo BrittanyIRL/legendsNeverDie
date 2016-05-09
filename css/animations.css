@@ -1,1 +1,71 @@
 /* interactive parts of site */
+
+.hovering{
+	animation-name: hovering;
+	-webkit-animation-name: hovering;
+
+	animation-duration: 2s;	
+	-webkit-animation-duration: 2s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes hovering {
+	0% {
+		transform: translateY(0%);	
+	}
+	50% {
+		transform: translateY(5%);	
+	}	
+	100% {
+		transform: translateY(0%);
+	}			
+}
+
+@-webkit-keyframes hovering {
+	0% {
+		-webkit-transform: translateY(0%);	
+	}
+	50% {
+		-webkit-transform: translateY(5%);	
+	}	
+	100% {
+		-webkit-transform: translateY(0%);
+	}			
+}
+
+.tiltRight{
+	animation-name: tiltRight;
+	-webkit-animation-name: tiltRight;
+
+	animation-duration: 4s;	
+	-webkit-animation-duration: 4s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes tiltRight {
+	0% {
+		transform: rotate(-4deg);	
+	}
+	50% {
+		transform: rotate(12deg);
+	}
+	100% {
+		transform: rotate(4deg);	
+	}							
+}
+
+@-webkit-keyframes tiltRight {
+	0% {
+		transform: rotate(-4deg);	
+	}
+	50% {
+		transform: rotate(12deg);
+	}
+	100% {
+		transform: rotate(4deg);	
+	}						
+}

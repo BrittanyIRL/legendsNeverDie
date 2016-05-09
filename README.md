@@ -3,14 +3,18 @@ because we lost too many in 2016
 
 Action Items:
 1) move #id with keys along page 
-- set start
-- set finish
+- set start 
+	-- done 
+- set finish 
+	-- done 
+- when not keydown/keyup make #id float up and down
 - set obstacles so that you have to use vertical space too
 - when moving forward or backwards speed up background motion(?)
 - tilt #id when moving to make better use of "movement" on page
 
 2) finish sequence 
 - when move #id to gates end keyup/down ability 
+	-- done
 - trigger animated keyframe
 - after animation is over ask player if they want to guide another legend to heaven
 

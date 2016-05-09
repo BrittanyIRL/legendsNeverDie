@@ -1,15 +1,16 @@
 /* static portions of site */
-#container {
+/*#container {
 	width: 600px;
 	height: 500px;
-}
+}*/
 #gameSpace {
 	position: fixed;
 	top: 0px;
-	width: 1200px;
-	height: 500px;
+	width: 100%;
+	height: 100%;
 	background-color: orange;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
 
 #legend {
