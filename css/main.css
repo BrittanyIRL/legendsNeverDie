@@ -1,16 +1,15 @@
 /* static portions of site */
-#gameSpaceContainer{
-	width: 1500px;
-	box-sizing: border-box;
+#container {
+	width: 600px;
+	height: 500px;
+}
+#gameSpace {
+	position: fixed;
+	top: 0px;
+	width: 1200px;
 	height: 500px;
 	background-color: orange;
-	position: relative;
 	overflow: hidden;
-}
-
-#gameSpace {
-	position: absolute;
-	top: 0px;
 }
 
 #legend {
@@ -22,7 +21,7 @@
 #gate {
 	position: absolute;
 	top: 100px;
-	right: 1800px;
+	left: 1400px;
 	width: 50px;
 	height: 500px;
 	background-color: red;
