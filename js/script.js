@@ -1,5 +1,9 @@
 $(document).ready(function(){
 	console.log("let's dance");
+
+	$('.introSpace button').click(function(){
+		$('.introSpace').addClass('hidden');
+	});
 		// store guided legends here
 		var finished = [];
     /// store key codes and currently pressed ones
@@ -19,8 +23,6 @@ $(document).ready(function(){
       img: currentCharacter.getAttribute('src')
 
     };
-    console.log(character.img);
-
     /// key detection (better to use addEventListener, but this will do)
     // onkeyup prevents continual motion
     document.body.onkeyup = 
@@ -45,17 +47,14 @@ $(document).ready(function(){
       currentY = character.y + 'px';
       character.element.style.left = currentX;
       character.element.style.top = currentY;
-      console.log(currentX + currentY);
-
     };
 
 
     /// character control
     var detectCharacterMovement = function(){
       if ( keys[keys.LEFT] ) {
-        // moveCharacter(-1, 0);
-        // moveWindow();
-        console.log("you can't go back");
+        moveCharacter(-1, 0);
+        moveWindow();
       }
       if ( keys[keys.RIGHT] ) {
       	$('#legend').addClass('tiltRight');
