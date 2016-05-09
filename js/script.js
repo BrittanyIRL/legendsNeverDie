@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	console.log("let's dance");
+		// store guided legends here
+		var finished = [];
     /// store key codes and currently pressed ones
     var keys = {};
         keys.UP = 38;
@@ -7,13 +9,17 @@ $(document).ready(function(){
         keys.RIGHT = 39;
         keys.DOWN = 40;
 
+    var currentCharacter = document.getElementById("legend");
     /// store reference to character's position and element
     var character = {
       x: 300,
       y: 100,
       speedMultiplier: 8,
-      element: document.getElementById("legend")
+      element: currentCharacter,
+      img: currentCharacter.getAttribute('src')
+
     };
+    console.log(character.img);
 
     /// key detection (better to use addEventListener, but this will do)
     // onkeyup prevents continual motion
@@ -75,14 +81,20 @@ $(document).ready(function(){
     var detectGate = function(){
     	if (character.x > 1400){
     		console.log('reached');
-
-    		}
-    	if (character.x > 1500){
+    		$('.gate').addClass('fadeIn');
+    	}
+    	if (character.x > 1450){
     		document.body.onkeydown = function(e){   
 				  e.preventDefault();
 				}
 				$('#legend').removeClass('tiltRight').addClass('hovering');
-    	}
+				
+				for (var i=0; i < finished.length; i++){
+					if(character.img != finished[i].img){
+						finished.push(character);
+					}
+				}
+			}
     };
 
     /// window center follow character 
