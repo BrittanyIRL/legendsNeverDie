@@ -8,15 +8,19 @@ Action Items:
 - set finish 
 	-- done 
 - when not keydown/keyup make #id float up and down
+	-- done
 - set obstacles so that you have to use vertical space too
-- when moving forward or backwards speed up background motion(?)
 - tilt #id when moving to make better use of "movement" on page
+	-- done
 
 2) finish sequence 
 - when move #id to gates end keyup/down ability 
 	-- done
 - trigger animated keyframe
+	-- done
 - after animation is over ask player if they want to guide another legend to heaven
+	-- (need to gather other images, right now it's reloading but not showing an image... because there isn't one to show most likely.)
+	-- (also need to tell DOM to show all them peeps in heaven when visible)
 
 3) intro page
 - #id fly in (css) and hover
@@ -33,7 +37,6 @@ Action Items:
 	-- change background for instance
 	-- play a sound snippet
 	-- lighting bolt 
-- gates open when get close enough
 
 
 Gitflow:
