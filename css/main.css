@@ -95,17 +95,25 @@
 }
 
 /*floating legends */
-.partyTime0 {
-	visibility: hidden;
+.heaven{
 	position: fixed;
 	width: 30%;
 	height: 60%;
 	top: 100px;
 	left: 120px;
 	z-index: 9999;
+	
+	
 }
-.partyTime1 {
-	visibility: hidden;
+.heaven img:first-of-type {
+	position: fixed;
+	width: 30%;
+	height: 60%;
+	top: 130px;
+	left: 400px;
+	z-index: 9999;
+}
+.heaven img:last-of-type {
 	position: fixed;
 	width: 30%;
 	height: 50%;
@@ -114,10 +122,12 @@
 	z-index: 9999;
 }
 
-.partyTime img{
+.heaven img{
 	object-fit: contain;
 	height: 80%;
 	width: auto;
+	animation-name: hovering;
+	-webkit-animation-name: hovering;
 }
 
 

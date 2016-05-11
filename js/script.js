@@ -40,7 +40,7 @@ $(document).ready(function(){
 			// swap image 
 			$('#legend').attr('src', legendImage);
 			$('.gate').removeClass('fadeIn');
-			$('.partyTime0').removeClass('partyTimeFade');
+			$('.heaven img').hide();
 			$('.partyTime1').removeClass('partyTimeFade');
 
 			executed = false;
@@ -133,18 +133,25 @@ $(document).ready(function(){
     	if (character.x > 1400){
     		// console.log('reached' + finished);
     		$('.gate').addClass('fadeIn');
+    		//cue legend entrance
     	}
     	if (character.x > 1450){
     		if(executed === false){
     			partyInHeaven();
+    			
+    			$('.heaven #0').delay(3000).fadeIn( 1000 ).addClass('hovering'); 
+    			$('.heaven #1').delay(3000).fadeIn( 1000 ).addClass('hovering'); 
+
+
   				console.log('there are ' + finished.length + ' remaining');
     			if( finished.length < legends.length ){
-    				$('.outro').slideUp( 300 ).delay( 2000 ).fadeIn( 1000 );	
+    				$('.outro').slideUp( 300 ).delay( 4000 ).fadeIn( 1000 );	
     			}
     			if (finished.length >= legends.length){
-    				$('.gameOver').slideUp( 300 ).delay( 2000 ).fadeIn( 1000 );
+    				$('.gameOver').slideUp( 300 ).delay( 4000 ).fadeIn( 1000 );
     			}
     		}
+
 				$('#legend').removeClass('tiltRight').addClass('hovering');			
 			}
     };
@@ -171,12 +178,18 @@ $(document).ready(function(){
 //this isn't quite done yet.
 		var partyInHeaven = function(){
 			executed = true;
-
+			var heaven = $(".heaven");
 			for(var i = 0; i < finished.length - 1; i ++){
 				// if(finished.length > 0){
 					console.log(finished + "inside party in heaven" + i);
-					$('body').append('<div class="partyTimeFade partyTime'+ i +'"><img src="' + finished[i] + '" /></div>');
-				//}
+					var img = $('<img id="'+ i + '">');
+					img.attr("src", finished[i]);
+					img.css("display", "none");
+					heaven.append(img);
+
+					//var img = document.createElement('<img src="' + finished[i] + '" class="partyTime'+ i + '" />');
+					console.log(img + "img to add");
+					//$('.gate').appendChild(img);
 			}
 		}
 

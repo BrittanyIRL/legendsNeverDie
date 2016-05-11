@@ -235,14 +235,16 @@
 	-webkit-animation-delay: 10s;
 
 	animation-timing-function: linear;	
-	-webkit-animation-timing-function: linear;		
+	-webkit-animation-timing-function: linear;	
+	animation-iteration-count: 1;
+	-webkit-animation-iteration-count: 1;	
 
 	visibility: visible !important;
 }
 
 @keyframes partyTimeFade {
 	0% {
-		opacity: 0.0;		
+		opacity: 0;		
 	}	
 	100% {
 		opacity: 1;	
@@ -251,7 +253,7 @@
 
 @-webkit-keyframes partyTimeFade {
 	0% {
-		opacity: 0.0;		
+		opacity: 0;		
 	}	
 	100% {
 		opacity: 1;	
