@@ -139,8 +139,8 @@ $(document).ready(function(){
     		if(executed === false){
     			partyInHeaven();
     			
-    			$('.heaven #0').delay(3000).fadeIn( 1000 ).addClass('hovering'); 
-    			$('.heaven #1').delay(3000).fadeIn( 1000 ).addClass('hovering'); 
+    			$('.heaven #0').delay(2000).fadeIn( 1000 ).addClass('hovering'); 
+    			$('.heaven #1').delay(3000).fadeIn( 800 ).addClass('hovering'); 
 
 
   				console.log('there are ' + finished.length + ' remaining');
@@ -175,21 +175,16 @@ $(document).ready(function(){
 				console.log(legend + "already exists");
 			}
 		}
-//this isn't quite done yet.
 		var partyInHeaven = function(){
 			executed = true;
 			var heaven = $(".heaven");
 			for(var i = 0; i < finished.length - 1; i ++){
-				// if(finished.length > 0){
 					console.log(finished + "inside party in heaven" + i);
 					var img = $('<img id="'+ i + '">');
 					img.attr("src", finished[i]);
 					img.css("display", "none");
 					heaven.append(img);
-
-					//var img = document.createElement('<img src="' + finished[i] + '" class="partyTime'+ i + '" />');
 					console.log(img + "img to add");
-					//$('.gate').appendChild(img);
 			}
 		}
 
