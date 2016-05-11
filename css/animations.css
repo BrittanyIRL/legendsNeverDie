@@ -223,3 +223,71 @@
 		opacity: 1;	
 	}		
 }
+
+.partyTimeFade {
+	animation-name: partyTimeFade;
+	-webkit-animation-name: partyTimeFade;
+
+	animation-duration: 3s;	
+	-webkit-animation-duration: 3s;
+
+	animation-delay: 10s;
+	-webkit-animation-delay: 10s;
+
+	animation-timing-function: linear;	
+	-webkit-animation-timing-function: linear;		
+
+	visibility: visible !important;
+}
+
+@keyframes partyTimeFade {
+	0% {
+		opacity: 0.0;		
+	}	
+	100% {
+		opacity: 1;	
+	}		
+}
+
+@-webkit-keyframes partyTimeFade {
+	0% {
+		opacity: 0.0;		
+	}	
+	100% {
+		opacity: 1;	
+	}		
+}
+
+.generalDelay {
+	animation-name: generalDelay;
+	-webkit-animation-name: generalDelay;
+
+	animation-duration: 10s;	
+	-webkit-animation-duration: 10s;
+
+	animation-delay: 50s;
+	-webkit-animation-delay: 50s;
+
+	animation-timing-function: linear;	
+	-webkit-animation-timing-function: linear;		
+
+	visibility: visible !important;
+}
+
+@keyframes generalDelay {
+	0% {
+		opacity: 0.0;		
+	}	
+	100% {
+		opacity: 1;	
+	}		
+}
+
+@-webkit-keyframes generalDelay {
+	0% {
+		opacity: 0.0;		
+	}	
+	100% {
+		opacity: 1;	
+	}		
+}

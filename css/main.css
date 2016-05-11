@@ -20,13 +20,51 @@
 }
 
 .outro {
-	display: none;
-	width: 300px;
-	height: 200px;
-	background-color: orange;
-	z-index: 999;
-	position: fixed;
+	display: none;	
 }
+
+.outro button {
+	z-index: 9999;
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	border-radius: 10px;
+	background-color: rgba(192,192,192, 0.4);
+	color: #F9F9F7;
+	font-size: 4em;
+	font-weight: 700;
+	top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+
+.outro button:hover {
+	background-color: rgba(192,192,192, 0.1);
+}
+
+
+.gameOver {
+	display: none;
+	z-index: 9999;
+	position: absolute;
+	width: 800px;
+	height: 200px;
+	border-radius: 10px;
+	background-color: rgba(192,192,192, 0.6);
+	color: #F9F9F7;
+	font-size: 2em;
+	font-weight: 700;
+	top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
 #gameSpace {
 	position: fixed;
 	top: 0px;
@@ -45,10 +83,6 @@
 	z-index: 999;
 }
 
-.archive {
-	position: absolute;
-	z-index: 999;
-}
 
 .gate {
 	position: fixed;
@@ -59,4 +93,33 @@
 	object-fit: fill;
 	visibility: hidden;
 }
+
+/*floating legends */
+.partyTime0 {
+	visibility: hidden;
+	position: fixed;
+	width: 30%;
+	height: 60%;
+	top: 100px;
+	left: 120px;
+	z-index: 9999;
+}
+.partyTime1 {
+	visibility: hidden;
+	position: fixed;
+	width: 30%;
+	height: 50%;
+	top: 130px;
+	left: 250px;
+	z-index: 9999;
+}
+
+.partyTime img{
+	object-fit: contain;
+	height: 80%;
+	width: auto;
+}
+
+
+
 

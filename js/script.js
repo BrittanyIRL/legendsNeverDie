@@ -4,7 +4,7 @@
 $(document).ready(function(){
 	console.log("let's dance");
 		var legendImage;
-
+		var executed = false;
 
 		// store total list, move images from legends to finished after get to heaven
 		var legends = ['img/bowie.png', 'img/prince.png', 'img/ian.png', 'img/alan.png'];
@@ -13,9 +13,9 @@ $(document).ready(function(){
 		//set up game with first legend. To be repeated with outro button 
 		$('.introSpace button').click(function(){
 			$('.introSpace').addClass('hidden');
-			newChar = legends.splice(0,1);
-			finished += newChar;
-			legendImage = newChar[0].toString();
+			newChar = legends.shift();
+			finished.push(newChar);
+			legendImage = newChar;
 			console.log(legendImage);
 			$('#legend').attr('src', legendImage);
 			/// game loop
@@ -27,20 +27,23 @@ $(document).ready(function(){
 		//rehide outro button
     $('.outro button').click(function(){
 			
-			$('.outro').addClass('hidden');
-			console.log('adding  ' + finished[0] + " to heaven");
-			console.log('adding  ' + finished + " to heaven");
+			$('.outro').hide();
+			//console.log('adding  ' + finished + " to heaven");
 
 			//update the set up dudes to bop in heaven
 			updateLegendCollection(legends, character.img);
 			//splice the next element in the legends array
-			newChar = legends.splice(0,1);
-			finished += newChar;
+			newChar = legends.shift();
+			finished.push(newChar);
 			//convert the object to a string 
-			legendImage = newChar[0].toString();
+			legendImage = newChar;
 			// swap image 
 			$('#legend').attr('src', legendImage);
 			$('.gate').removeClass('fadeIn');
+			$('partyTime0').removeClass('partyTimeFade');
+			$('partyTime1').removeClass('partyTimeFade');
+
+			executed = false;
 			//reset window and page... 
 			character.x = 300;
 			character.y = 100;
@@ -128,13 +131,23 @@ $(document).ready(function(){
 
     var detectGate = function(){
     	if (character.x > 1400){
-    		console.log('reached' + finished);
+    		// console.log('reached' + finished);
     		$('.gate').addClass('fadeIn');
-
     	}
     	if (character.x > 1450){
-				$('#legend').removeClass('tiltRight').addClass('hovering');
-				$('.outro').show();	
+
+    		if(executed === false){
+    			partyInHeaven();
+    			$('.partyTime0', 'partyTime1').addClass('partyTimeFade');
+    			console.log('there are ' + finished.length + ' remaining');
+    			if( finished.length < legends.length ){
+    				$('.outro').slideUp( 300 ).delay( 2000 ).fadeIn( 1000 );	
+    			}
+    			if (finished.length >= legends.length){
+    				$('.gameOver').slideUp( 300 ).delay( 2000 ).fadeIn( 1000 );
+    			}
+    		}
+				$('#legend').removeClass('tiltRight').addClass('hovering');			
 			}
     };
 
@@ -151,9 +164,21 @@ $(document).ready(function(){
 		var updateLegendCollection = function(legends, legend){
 			if(legends.indexOf(legend) === -1){
 				legends.push(legend);
-				console.log('new legend ready to go')
+				console.log('new legend ready to go');
+				console.log(finished)
 			} else if (legends.indexOf(legend) > -1){
 				console.log(legend + "already exists");
+			}
+		}
+//this isn't quite done yet.
+		var partyInHeaven = function(){
+			executed = true;
+
+			for(var i = 0; i < finished.length - 1; i ++){
+				// if(finished.length > 0){
+					console.log(finished + "inside party in heaven" + i);
+					$('body').append('<div class="partyTime'+ i +'"><img src="' + finished[i] + '" /></div>');
+				//}
 			}
 		}
 
