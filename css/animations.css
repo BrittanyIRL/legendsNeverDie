@@ -17,17 +17,13 @@
 		background-size: cover;
 	}
 
-	40% {
-		opacity: 0.8;
-	}
+	
 	50% {
 		background-image: url('../img/stormy.jpg');
 		opacity: 1.0;
 		background-size: cover;
 	}
-	65% {
-		opacity: 0.8;
-	}
+	
 	75% {
 		background-image: url('../img/bluesky.jpg');
 		opacity: 1.0;
