@@ -40,8 +40,8 @@ $(document).ready(function(){
 			// swap image 
 			$('#legend').attr('src', legendImage);
 			$('.gate').removeClass('fadeIn');
-			$('partyTime0').removeClass('partyTimeFade');
-			$('partyTime1').removeClass('partyTimeFade');
+			$('.partyTime0').removeClass('partyTimeFade');
+			$('.partyTime1').removeClass('partyTimeFade');
 
 			executed = false;
 			//reset window and page... 
@@ -135,11 +135,9 @@ $(document).ready(function(){
     		$('.gate').addClass('fadeIn');
     	}
     	if (character.x > 1450){
-
     		if(executed === false){
     			partyInHeaven();
-    			$('.partyTime0', 'partyTime1').addClass('partyTimeFade');
-    			console.log('there are ' + finished.length + ' remaining');
+  				console.log('there are ' + finished.length + ' remaining');
     			if( finished.length < legends.length ){
     				$('.outro').slideUp( 300 ).delay( 2000 ).fadeIn( 1000 );	
     			}
@@ -177,7 +175,7 @@ $(document).ready(function(){
 			for(var i = 0; i < finished.length - 1; i ++){
 				// if(finished.length > 0){
 					console.log(finished + "inside party in heaven" + i);
-					$('body').append('<div class="partyTime'+ i +'"><img src="' + finished[i] + '" /></div>');
+					$('body').append('<div class="partyTimeFade partyTime'+ i +'"><img src="' + finished[i] + '" /></div>');
 				//}
 			}
 		}
