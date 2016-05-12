@@ -94,7 +94,9 @@
 	width: 200px;
 	height: 100px;
 	border-radius: 10px;
-	background-color: rgba(192,192,192, 0.4);
+	background: -webkit-linear-gradient(#FF1C10, #E8E514, #241BFF, #40E81F);
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
 	color: #F9F9F7;
 	font-size: 4em;
 	font-weight: 700;
@@ -104,10 +106,6 @@
     right: 0;
     margin: auto;
 
-}
-
-.outro button:hover {
-	background-color: rgba(192,192,192, 0.1);
 }
 
 
