@@ -64,14 +64,14 @@
 	height: 50px;
 	margin-left: 25%;
 	text-align: center;
-	background-color: rgba(192,192,192, 0.4);
+	background-color: transparent;
 	color: yellow;
 	outline: none;
+	border: 4px solid;
 }
 
 .introText button:hover {
-	background-color: rgba(192,192,192, 0.8);
-	outline: none;
+	color: orange;
 }
 .introText .fineprint {
 	font-size: .6em;
@@ -93,7 +93,7 @@
 	position: absolute;
 	width: 200px;
 	height: 100px;
-	border-radius: 10px;
+	border: 4px solid;
 	background: -webkit-linear-gradient(#FF1C10, #E8E514, #241BFF, #40E81F);
 	  -webkit-background-clip: text;
 	  -webkit-text-fill-color: transparent;
@@ -105,7 +105,10 @@
     left: 0;
     right: 0;
     margin: auto;
+}
 
+.outro button {
+	border: 4px solid #E8E514;
 }
 
 
