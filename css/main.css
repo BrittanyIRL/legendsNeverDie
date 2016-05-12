@@ -23,37 +23,41 @@
 	animation-iteration-count: 1;
 	animation-name: introAnimation;
 }
+.introText h1 {
+	margin: 0;
+	font-family: 'Satisfy', cursive;
+	font-size: 100px;
+	text-align: center;
+	 background: -webkit-linear-gradient(#FF1C10, #E8E514, #241BFF, #40E81F);
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+}
 
+.introText #heading2 {
+	color: #D815FF;
+	font-size: 200px;
+	margin: 0;
+	padding: 0;
+}
 .introText {
 	top:0;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: 20vh auto auto;
-    padding: 1em 2em;
-    text-align: justify;
-    width: 60vw;
-    height: 50vh;
-    background: -moz-linear-gradient( top ,
-        rgba(255, 0, 0, 1) 0%,
-        rgba(255, 255, 0, 1) 15%,
-        rgba(0, 255, 0, 1) 30%,
-        rgba(0, 255, 255, 1) 50%,
-        rgba(0, 0, 255, 1) 65%,
-        rgba(255, 0, 255, 1) 80%,
-        rgba(255, 0, 0, 1) 100%);
-    background: -webkit-gradient(linear,  left top,  left bottom, 
-        color-stop(0%, rgba(255, 0, 0, 1)), 
-        color-stop(15%, rgba(255, 255, 0, 1)),
-        color-stop(30%, rgba(0, 255, 0, 1)),
-        color-stop(50%, rgba(0, 255, 255, 1)),
-        color-stop(65%, rgba(0, 0, 255, 1)),
-        color-stop(80%, rgba(255, 0, 255, 1)),
-        color-stop(100%, rgba(255, 0, 0, 1)));
+    margin: 0 auto;
+    padding: 0 2em 2em;
+    text-align: left;
+    width: 90vw;
+    height: 90vh;
     animation-duration: 20s;
 	animation-timing-function: ease-in;
 	animation-iteration-count: 1;
 	animation-name: generalDelay;
+}
+
+.introText div {
+	width: 50vw;
+	margin: 0 auto;
 }
 .introText button {
 	width: 40%;
@@ -77,12 +81,6 @@
 
 .introText .fineprint:hover {
 	opacity: 1;
-}
-
-.introText h1 {
-	font-size: 4em;
-	margin: 0;
-	font-family: 'Satisfy', cursive;
 }
 
 .outro {
