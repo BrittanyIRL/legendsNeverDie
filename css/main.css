@@ -212,5 +212,59 @@
 }
 
 
+@media (max-width: 1024px) {
+
+	/* prevent phone and tablet attempts */
+
+	body {
+		background-image: url('../img/bluesky.jpg');
+	}
+
+	#container {
+		display: none;
+	}
+
+	h1 {
+		margin: 0;
+		font-family: 'Satisfy', cursive;
+		font-size: 6em;
+		text-align: center;
+	 	background: -webkit-linear-gradient(#FF1C10, #E8E514, #241BFF, #40E81F);
+	 	 -webkit-background-clip: text;
+	 	 -webkit-text-fill-color: transparent;
+	}
+
+	img {
+		padding-top: 1em;
+		max-height: 50vh;
+		max-width: 50vw;
+		float: right;
+		animation-name: hovering;
+		-webkit-animation-name: hovering;
+	}
+
+	.mobileMessage {
+		margin: 0 1em;
+		max-width: 50vw;
+		float: left;
+		padding: 1em;
+		color: white;
+		text-align: right;
+
+	}
+}
+
+@media (max-width: 520px) {
+	h1 {
+		font-size: 4em;
+	}
+	img {
+		max-width: 30vw;
+	}
+	.mobileMessage {
+		width: 60vw;
+	}
+}
+
 
 
