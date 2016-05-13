@@ -211,6 +211,9 @@
 	-webkit-animation-name: hovering;
 }
 
+#keyboardless {
+	display: none;
+}
 
 @media (max-width: 1024px) {
 
