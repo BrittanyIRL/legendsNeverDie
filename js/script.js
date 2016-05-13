@@ -7,7 +7,7 @@ $(document).ready(function(){
 		var executed = false;
 
 		// store total list, move images from legends to finished after get to heaven
-		var legends = ['img/bowie.png', 'img/prince.png', 'img/snape.png'];
+		var legends = ['img/bowie.png', 'img/prince.png', 'img/snape.png', 'excess'];
 		
 
 		//set up game with first legend. To be repeated with outro button 
@@ -147,7 +147,9 @@ $(document).ready(function(){
     			if( finished.length < legends.length ){
     				$('.outro').slideUp( 300 ).delay( 4000 ).fadeIn( 1000 );	
     			}
-    			if (finished.length >= legends.length){
+    			if (finished.length > legends.length - 1){
+            console.log(finished.length);
+            console.log(legends.length);
     				$('.gameOver').slideUp( 300 ).delay( 4000 ).fadeIn( 1000 );
     			}
     		}
