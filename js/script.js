@@ -7,7 +7,7 @@ $(document).ready(function(){
 		var executed = false;
 
 		// store total list, move images from legends to finished after get to heaven
-		var legends = ['img/bowie.png', 'img/prince.png', 'img/ian.png', 'img/alan.png'];
+		var legends = ['img/bowie.png', 'img/prince.png', 'img/snape.png'];
 		
 
 		//set up game with first legend. To be repeated with outro button 
