@@ -7,8 +7,9 @@
 	visibility: hidden;
 }
 
-
-
+a {
+	text-decoration: none;
+}
 
 .introSpace {
 	position: fixed;
@@ -218,7 +219,9 @@
 @media (max-width: 1024px) {
 
 	/* prevent phone and tablet attempts */
-
+	#keyboardless {
+		display: block;
+	}
 	body {
 		background-image: url('../img/bluesky.jpg');
 	}
